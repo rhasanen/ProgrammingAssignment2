@@ -3,6 +3,10 @@
 
 ## Write a short comment describing this function
 ## Create a special matrix object which we can cache the inverse for
+##
+## Four functions: set, get, setinverse, getinverse
+##
+##
 makeCacheMatrix <- function(x = matrix()) {
 
   m <- NULL
@@ -22,6 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 ## Operate on our special matrix object to calculate the inverse or use the cached result.
+## If the inverse exists get the cached data otherwise use the solve() to calculate inverse
+##
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         m <- x$getinverse()
